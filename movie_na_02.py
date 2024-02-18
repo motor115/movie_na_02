@@ -22,10 +22,6 @@ st.header('音声文字起こしアプリ')
 
 def transcribe():
     st.title("Transcribe by Streamlit") # タイトルの設定
-    if st.session_state.openai.api_key == "":
-        sac.alert(label='warning', description='Please add your OpenAI API key to continue.', color='red', banner=[False, True], icon=True, size='lg')
-        st.stop()
-
     upload_file = st.file_uploader('音声文字起こしするファイルを選択してください  \nAPIの上限により25MB以上のファイルは文字起こし不可です。\
                                 ファイルを分割する等容量を少なくしてください', type=['m4a', 'mp3', 'webm', 'mp4', 'mpga', 'wav'])
     if upload_file is not None:
