@@ -53,7 +53,7 @@ if upload_file is not None:
                     messages=[{"role": "system", "content": "あなたは優秀な日本語のエディターです。"},
                         {"role": "user", "content": prompt}
                     ]
-                    text_modified = openai.ChatCompletion.create(
+                    text_modified = openai.chat.completions.create(
                         model="gpt-3.5-turbo",
                         messages=messages,
                         temperature=0,
