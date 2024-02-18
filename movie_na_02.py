@@ -1,3 +1,4 @@
+
 import openai
 import streamlit as st
 from typing import Any
@@ -12,7 +13,12 @@ japanese_spliter = JapaneseCharacterTextSplitter(
     chunk_size=1000,
     chunk_overlap=0,
 )
-openai.api_key = 'your-api-key-here'
+
+# OpenAI APIキー設定
+st.sidebar.title("Settings")
+api_key = st.sidebar.text_input("OpenAI API Keyを入力してください")
+openai.api_key = api_key
+
 st.header('音声文字起こしアプリ')
 
 upload_file = st.file_uploader('音声文字起こしするファイルを選択してください  \nAPIの上限により25MB以上のファイルは文字起こし不可です。\
