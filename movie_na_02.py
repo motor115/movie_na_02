@@ -60,6 +60,3 @@ def transcribe():
                 st.success('***日本語の修正を完了しました***')
                 st.write("***文字起こし結果(修正後)***")
                 st.write(texts_modified)
-
-if __name__ == "__main__":
-    transcribe();
