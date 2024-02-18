@@ -18,10 +18,10 @@ japanese_spliter = JapaneseCharacterTextSplitter(
 st.sidebar.title("Settings")
 api_key = st.sidebar.text_input("OpenAI API Keyを入力してください")
 openai.api_key = api_key
+st.header('音声文字起こしアプリ')
 
 def transcribe():
     st.title('音声文字起こしアプリ')
-    st.header('音声文字起こしアプリ')
     upload_file = st.file_uploader('音声文字起こしするファイルを選択してください  \nAPIの上限により25MB以上のファイルは文字起こし不可です。\
                                 ファイルを分割する等容量を少なくしてください', type=['m4a', 'mp3', 'webm', 'mp4', 'mpga', 'wav'])
     if upload_file is not None:
