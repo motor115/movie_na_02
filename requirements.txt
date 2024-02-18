@@ -1,6 +1,11 @@
-streamlit==1.28.1
-streamlit-webrtc==0.47.1
-openai==1.1.1
-opencv-python-headless==4.8.1.78
-langchain==0.1.7
+streamlit
+mitosheet
+pandas
+openai
+langchain
+duckduckgo-search
 typing
+streamlit_antd_components
+numexpr
+st-img-pastebutton
+langchain_openai
