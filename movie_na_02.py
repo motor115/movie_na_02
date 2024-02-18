@@ -38,9 +38,9 @@ if upload_file is not None:
         else:
             with st.spinner('***音声文字起こしを実行中です...***'):
                 trans = openai.audio.transcriptions.create(
-                  model="whisper-1", 
-                  file=audio_file, 
-                  response_format="text"
+                  model = "whisper-1", 
+                  file = upload_file, 
+                  response_format = "text"
                 )
             st.success('***音声文字起こしを完了しました***')
             st.write("***文字起こし結果***")
