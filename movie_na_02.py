@@ -54,11 +54,11 @@ if upload_file is not None:
                         {"role": "user", "content": prompt}
                     ]
                     text_modified = openai.chat.completions.create(
-                        model="gpt-3.5-turbo",
-                        messages=messages,
-                        temperature=0,
+                        model = "gpt-3.5-turbo",
+                        messages = messages,
+                        temperature = 0,
                     )
-                    texts_modified=texts_modified+text_modified["choices"][0]["message"]["content"]
+                    texts_modified = texts_modified + text_modified.choices[0].message.content
             st.success('***日本語の修正を完了しました***')
             st.write("***文字起こし結果(修正後)***")
             st.write(texts_modified)
