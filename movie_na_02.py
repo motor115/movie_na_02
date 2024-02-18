@@ -18,6 +18,7 @@ japanese_spliter = JapaneseCharacterTextSplitter(
 st.sidebar.title("Settings")
 api_key = st.sidebar.text_input("OpenAI API Keyを入力してください")
 openai.api_key = api_key
+st.header('音声文字起こしアプリ')
 
 def transcribe():
     st.title("Transcribe by Streamlit") # タイトルの設定
@@ -65,4 +66,4 @@ def transcribe():
                 st.write(texts_modified)
 
 if __name__ == "__main__":
-    transcribe()
+    transcribe();
