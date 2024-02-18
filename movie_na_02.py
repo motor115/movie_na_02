@@ -37,7 +37,11 @@ if upload_file is not None:
             st.error('エラー：ファイルが選択されていません', icon="🚨")
         else:
             with st.spinner('***音声文字起こしを実行中です...***'):
-                trans= openai.Audio.transcribe("whisper-1" ,upload_file)["text"]
+                trans = openai.audio.transcriptions.create(
+                  model="whisper-1", 
+                  file=audio_file, 
+                  response_format="text"
+                )
             st.success('***音声文字起こしを完了しました***')
             st.write("***文字起こし結果***")
             st.write(trans)
