@@ -22,7 +22,7 @@ st.header('音声文字起こしアプリ')
 
 def transcribe():
     st.title("Transcribe by Streamlit") # タイトルの設定
-    if st.session_state.openai_api_key == "":
+    if st.session_state.openai.api_key == "":
         sac.alert(label='warning', description='Please add your OpenAI API key to continue.', color='red', banner=[False, True], icon=True, size='lg')
         st.stop()
 
